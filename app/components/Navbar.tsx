@@ -1,6 +1,6 @@
-import { Link } from "react-router";
+import {Link} from "react-router";
 
-const Navbar : () => Element = () => {
+const Navbar: () => Element = () => {
   return (
     <nav className="navbar">
         <Link to='/'>
