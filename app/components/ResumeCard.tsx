@@ -1,6 +1,16 @@
-const ResumeCard:() => Element = () => {
+import {Link} from 'react-router';
+
+const ResumeCard:() => Element = ({resume: {companyName, jobTitle, id, feedback}}: {resume: Resume}) => {
   return (
-    <div> ResumeCard </div>
+    <Link to={`/resume/${id}`} className='resume-card animate-in fade-in fade-in duration-1000'>
+      <div className='flex flex-col gap-2'>
+          <h2 className='!test-black font-bold break-words'> {companyName} </h2>
+          <h3 className='text-lg break-words text-gray-500'> {jobTitle} </h3>
+      </div>
+      <div className='flex-shrink-0 '>
+
+      </div>
+    </Link>
   )
 }
 
